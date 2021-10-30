@@ -1,5 +1,4 @@
-import { galleryItems } from './gallery-items.js';
-
+import { galleryItems } from "./gallery-items.js";
 
 // const imagesContainer = document.querySelector('.gallery')
 // const imagesMurkup = createGalleryItemsMurkup(galleryItems)
@@ -11,8 +10,6 @@ import { galleryItems } from './gallery-items.js';
 //   }
 //   console.log(evt.target)
 // }
-
-
 
 // console.log(createGalleryItemsMurkup(galleryItems))
 // const gallery = document.querySelector('galleryItems')
@@ -31,51 +28,19 @@ import { galleryItems } from './gallery-items.js';
 //     </div>`
 //    })
 //    .join('')
-   
+
 // }
 
-// const gallaryNode = document.querySelector('.gallery');
+const gallaryNode = document.querySelector(".gallery");
 
-// const newGallery = galleryItems.map(element =>
-//   `<a class="gallery__item" href="${element.original}">
-//   <img class="gallery__image" src="${element.preview}" alt="${element.description}" />
-// </a>`).join('');
-
-// gallaryNode.insertAdjacentHTML('beforeend', newGallery);
-
-// let gallery = new SimpleLightbox('.gallery a', {
-//     captionsData: 'alt',
-//     captionPosition: 'bottom',
-//     captionDelay: 250,
-// });
-
-// const instance = basicLightbox.create(`
-//     <div class="modal">
-//         <p>A custom modal that has been styled independently. It's not part of basicLightbox, but perfectly shows its flexibility.</p>
-       
-//         <a>Close</a>
-//     </div>
-// `, {
-//     onShow: (instance) => {
-//         instance.element().querySelector('a').onclick = instance.close
-//     }
-// })
-
-// instance.show()
-
-// / const instance = basicLightbox.create(`
-// //     <div class="modal">
-
-// //     </div>
-// // `)
-
-// const  instance  =  basicLightbox . create ( ` 
-
-// `   )
-// instance.show()
-// const instance = basicLightbox.create(`
-//     <div class="modal">  </div>
-// `)
-
+const newGallery = galleryItems
+  .map(
+    (element) =>
+      `<a class="gallery__item" href="${element.original}" data-lightbox = "mygallery">
+  <img class="gallery__image" src="${element.preview}" alt="${element.description}" />
+</a>`
+  )
+  .join("");
+gallaryNode.insertAdjacentHTML("beforeend", newGallery);
 
 console.log(galleryItems);
